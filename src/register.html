@@ -4,17 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
-    <title>Register | TIXVEL</title>
+    <title>Daftar | TIXVEL</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
   </head>
-  <body>
+  <body class="bg-[#F7F8F9] p-2">
     <div class="flex items-center justify-center min-h-screen">
-      <div class="max-w-sm w-full border-2 p-4 rounded-md shadow-lg">
+      <div
+        class="w-full md:max-w-[550px] border-2 p-4 sm:p-6 md:p-8 rounded-md bg-white"
+      >
         <div class="flex justify-center items-center">
           <img src="img/logo.png" alt="" width="200" />
         </div>
-        <h1 class="text-2xl font-bold text-[#ED8728] text-center">Register</h1>
-        <p class="text-sm text-gray-500 font-semibold text-center mb-4">
-          Welcome, please enter your details
+        <p class="text-xl text-gray-700 font-normal text-center mb-4">
+          Buat Akun Baru
         </p>
         <form class="pt-5" action="">
           <div class="mb-3">
@@ -55,7 +57,7 @@
               type="password"
               id="password"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5"
-              placeholder="Password"
+              placeholder="**********"
               required
             />
           </div>
@@ -63,31 +65,32 @@
             <label
               for="confirmPassword"
               class="block mb-1 text-sm font-medium text-gray-800"
-              >Password</label
+              >Konfirmasi Password</label
             >
             <input
               type="password"
               id="confirmPassword"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5"
-              placeholder="Confirm Password"
+              placeholder="**********"
               required
             />
           </div>
 
           <button
-            class="bg-[#ED8728] hover:bg-[#ce7929] mt-4 text-white text-xs font-semibold rounded-lg w-full py-3 uppercase"
+            type="submit"
+            class="bg-orange-500 hover:bg-orange-600 mt-4 text-white text-sm font-medium rounded-lg w-full py-3"
           >
-            Register
+            Daftar
           </button>
         </form>
 
         <!-- register -->
-        <h5 class="text-center text-sm py-4 text-gray-700">
-          Already have an account?
+        <h5 class="text-center text-sm py-4 text-gray-600">
+          Sudah Punya Akun?
           <a
             href="login.html"
             class="text-blue-500 hover:text-blue-700 underline"
-            >Login here</a
+            >Masuk</a
           >
         </h5>
       </div>

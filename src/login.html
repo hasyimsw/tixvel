@@ -4,23 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
-    <title>TIXVEL</title>
+    <title>Masuk | TIXVEL</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
   </head>
-  <body>
+  <body class="p-2 bg-[#F7F8F9]">
     <div class="flex items-center justify-center min-h-screen">
-      <div class="max-w-sm w-full border-2 p-4 rounded-md shadow-lg">
+      <div
+        class="w-full md:max-w-[550px] border-2 p-4 sm:p-6 md:p-8 rounded-md bg-white"
+      >
         <div class="flex justify-center items-center">
           <img src="img/logo.png" alt="" width="200" />
         </div>
-        <h1 class="text-2xl font-bold text-[#ED8728] text-center">Login</h1>
-        <p class="text-sm text-gray-500 font-semibold text-center mb-4">
-          Welcome, please enter your details
+        <p class="text-xl text-gray-700 font-normal text-center mb-4">
+          Selamat Datang di TIXVEL
         </p>
         <form class="pt-5" action="">
           <div class="mb-3">
             <label
               for="email"
-              class="block mb-1 text-sm font-medium text-gray-800"
+              class="block mb-2 text-sm font-medium text-gray-900"
               >Email</label
             >
             <input
@@ -34,14 +36,14 @@
           <div class="mb-3">
             <label
               for="password"
-              class="block mb-1 text-sm font-medium text-gray-800"
+              class="block mb-2 text-sm font-medium text-gray-900"
               >Password</label
             >
             <input
               type="password"
               id="password"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5"
-              placeholder="Password"
+              placeholder="**********"
               required
             />
           </div>
@@ -49,36 +51,51 @@
           <!-- checkbox and forgot password -->
           <div class="py-3 flex justify-between">
             <!-- checkbox -->
-            <div class="flex items-center mb-4">
-              <input
-                id="default-checkbox"
-                type="checkbox"
-                value=""
-                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
-              />
-              <label
-                for="default-checkbox"
-                class="ms-1 text-sm text-gray-700"
-                >Remember me</label
-              >
-            </div>
+            <div class=""></div>
             <!-- forgot password -->
-            <a href="#" class="text-sm text-blue-500 hover:text-blue-700 underline"
-              >Forgot password?</a
+            <a
+              href="#"
+              class="text-sm text-blue-500 hover:text-blue-700 underline"
+              >Lupa Password?</a
             >
           </div>
 
           <button
-            class="bg-[#ED8728] hover:bg-[#ce7929] text-white text-xs font-semibold rounded-lg w-full py-3 uppercase"
+            type="submit"
+            class="bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium rounded-lg w-full py-3"
           >
-            Login
+            Masuk
           </button>
         </form>
 
+        <div class="flex items-center my-4">
+          <div class="border-t border-gray-300 flex-grow"></div>
+          <div class="mx-4 text-gray-500">atau</div>
+          <div class="border-t border-gray-300 flex-grow"></div>
+        </div>
+
+        <!-- auth google -->
+        <a href="/auth/google">
+          <div
+            class="group w-full flex items-center gap-2 justify-center text-gray-600 border-2 border-orange-500 bg-white transition font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+          >
+            <img
+              src="img/icons8-google.svg"
+              alt="Google Logo"
+              class="w-6 h-6"
+            />
+            Masuk dengan Google
+          </div>
+        </a>
+
         <!-- register -->
-        <h5 class="text-center text-sm py-4 text-gray-700">
-          Don't have an account?
-          <a href="register.html" class="text-blue-500 hover:text-blue-700 underline">Register</a>
+        <h5 class="text-center text-sm mt-6 text-gray-600">
+          Belum punya akun?
+          <a
+            href="register.html"
+            class="text-blue-500 hover:text-blue-700 underline"
+            >Daftar</a
+          >
         </h5>
       </div>
     </div>

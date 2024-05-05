@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <title>Events | TIXVEL</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+  </head>
+  <body class="bg-[#F7F8F9]">
+    <!-- navbar -->
+    <nav class="bg-[#F7F8F9] fixed z-50 w-full shadow-md top-0">
+      <div
+        class="container mx-auto px-4 md:flex items-center justify-between gap-6"
+      >
+        <!-- Logo -->
+        <div class="flex items-center justify-between md:w-auto w-full">
+          <a href="#" class="p-2 flex-1 font-bold"
+            ><img src="img/logo.png" class="h-16" alt="Tixvel Logo"
+          /></a>
+
+          <!-- mobile menu icon -->
+          <div class="md:hidden flex items-center">
+            <button
+              type="button"
+              class="mobile-menu-button p-2 bg-slate-100 hover:bg-slate-200 rounded-md"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="hidden md:flex md:flex-row flex-col items-center justify-start md:space-x-1 pb-3 md:pb-0 navigation-menu"
+        >
+          <a
+            href="#"
+            class="py-2 px-3 block text-base hover:text-orange-900 hover:bg-orange-100 rounded-md"
+            >Beranda</a
+          >
+          <!-- Dropdown menu -->
+          <div class="relative hover:bg-orange-100 rounded-md">
+            <button
+              type="button"
+              class="dropdown-toggle py-2 px-3 hover:text-orange-900 flex items-center justify-between w-full gap-2 rounded"
+            >
+              <span class="pointer-events-none select-none">Kategori</span>
+              <svg
+                class="w-3 h-3 pointer-events-none"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </button>
+            <div
+              class="dropdown-menu absolute hidden bg-white rounded-md shadow z-10 w-full mt-1"
+            >
+              <a
+                href="#"
+                class="block p-2 hover:bg-gray-100 text-sm hover:rounded-md"
+                >Seminar</a
+              >
+              <a
+                href="#"
+                class="block p-2 hover:bg-gray-100 text-sm hover:rounded-md"
+                >Konser</a
+              >
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="py-2 px-3 block hover:text-orange-900 hover:bg-orange-100 rounded-md"
+            >Hubungi kami</a
+          >
+
+          <div
+            class="relative hover:text-orange-900 hover:bg-orange-100 rounded-md"
+          >
+            <button
+              type="button"
+              class="dropdown-toggle py-2 px-3 flex items-center justify-between w-full gap-2 rounded"
+            >
+              <span class="pointer-events-none select-none">Account</span>
+              <svg
+                class="w-3 h-3 pointer-events-none"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </button>
+            <div
+              class="dropdown-menu absolute hidden bg-white rounded-md shadow mt-1 md:w-44"
+            >
+              <a
+                href="transaksi.html"
+                class="block p-2 hover:bg-gray-100 text-sm hover:rounded-md text-gray-700"
+                >Transaksi</a
+              >
+              <a
+                href="tiket.html"
+                class="block p-2 hover:bg-gray-100 text-sm hover:rounded-md text-gray-700"
+                >Tiket</a
+              >
+              <a
+                href="profil.html"
+                class="block p-2 hover:bg-gray-100 text-sm hover:rounded-md text-gray-700"
+                >Pengaturan Akun</a
+              >
+              <a
+                href="login.html"
+                class="block p-2 hover:bg-gray-100 text-sm font-semibold text-red-600 hover:rounded-md"
+                >Keluar</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- searching -->
+    <div class="container flex items-center justify-between pt-24 lg:pt-28">
+      <div class="relative w-full">
+        <input
+          type="text"
+          class="block w-full px-4 py-2.5 text-gray-900 border border-orange-500 md:border-2 md:px-5 md:py-3 bg-white rounded-xl focus:ring-blue-500 focus:border-orange-500"
+          placeholder="Cari Event Disini...."
+        />
+      </div>
+      <a
+        href=""
+        class="inline-flex items-center px-4 py-2.5 ml-2 text-sm text-white font-medium border-4 md:px-5 md:py-3 min-w-fit bg-orange-500 rounded-xl border-orange-500 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-blue-300"
+      >
+        <svg
+          class="w-4 h-4 md:mr-2"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 20 20"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+          ></path>
+        </svg>
+        <span class="hidden md:block">Cari Event</span>
+      </a>
+    </div>
+    <!-- end searching -->
+
+    <!-- cards events -->
+    <section class="container mt-10 px-4 mb-16">
+      <h2 class="mb-5 text-2xl font-semibold">Hasil Pencarian</h2>
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">
+        <!-- repeat cards -->
+        <div
+          class="flex flex-col justify-between flex-auto gap-4 p-4 border-2 border-gray-200 bg-white rounded-2xl card"
+        >
+          <a href="#">
+            <div
+              class="image-card-event h-[110px] sm:h-[180px] lg:h-[130px] xl:h-[120px] 2xl:h-[140px] rounded-md overflow-hidden flex items-center justify-center"
+            >
+              <img
+                src="img/p1.webp"
+                alt=""
+                class="text-gray-700 h-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-2 info">
+              <div>
+                <p
+                  class="mt-3 inline-block text-lg font-semibold text-orange-500 border-orange-900"
+                >
+                  BINTANG FEST 2024
+                </p>
+                <span
+                  class="px-3 block mt-1 w-fit rounded-full py-[2px] text-[10px] bg-orange-100 text-orange-500 label-category"
+                  >Konser</span
+                >
+              </div>
+              <div class="flex items-center gap-1">
+                <img src="https://eratix.id/icons/calendar.svg" alt="" />
+                <span>Jumat, 26 Apr 2024</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <img src="https://eratix.id/icons/loc.svg" alt="" />
+                <span>Semarang</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <img src="https://eratix.id/icons/wallet.svg" alt="" />
+                <span>Mulai dari Rp35,000</span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="py-2 text-center text-white bg-orange-500 rounded-lg hover:bg-orange-400 ease-in duration-200"
+            >Beli Tiket</a
+          >
+        </div>
+        <div
+          class="flex flex-col justify-between flex-auto gap-4 p-4 border-2 border-gray-200 bg-white rounded-2xl card"
+        >
+          <a href="#">
+            <div
+              class="image-card-event h-[110px] sm:h-[180px] lg:h-[130px] xl:h-[120px] 2xl:h-[140px] rounded-md overflow-hidden flex items-center justify-center"
+            >
+              <img
+                src="img/p2.webp"
+                alt=""
+                class="text-gray-700 h-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-2 info">
+              <div>
+                <p
+                  class="mt-3 inline-block text-lg font-semibold text-orange-500 border-orange-900"
+                >
+                  SIMAK SIAR GIGS VOL 5
+                </p>
+                <span
+                  class="px-3 block mt-1 w-fit rounded-full py-[2px] text-[10px] bg-orange-100 text-orange-500 label-category"
+                  >Konser</span
+                >
+              </div>
+              <div class="flex items-center gap-1">
+                <img src="https://eratix.id/icons/calendar.svg" alt="" />
+                <span>Kamis, 28 Mar 2024</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <img src="https://eratix.id/icons/loc.svg" alt="" />
+                <span>Yogyakarta</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <img src="https://eratix.id/icons/wallet.svg" alt="" />
+                <span>Mulai dari Rp35,000</span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="py-2 text-center text-white bg-orange-500 rounded-lg hover:bg-orange-400 ease-in duration-200"
+            >Beli Tiket</a
+          >
+        </div>
+        <div
+          class="flex flex-col justify-between flex-auto gap-4 p-4 border-2 border-gray-200 bg-white rounded-2xl card"
+        >
+          <a href="#">
+            <div
+              class="image-card-event h-[110px] sm:h-[180px] lg:h-[130px] xl:h-[120px] 2xl:h-[140px] rounded-md overflow-hidden flex items-center justify-center"
+            >
+              <img
+                src="img/p3.webp"
+                alt=""
+                class="text-gray-700 h-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-2 info">
+              <div>
+                <p
+                  class="mt-3 inline-block text-lg font-semibold text-orange-500 border-orange-900"
+                >
+                  Pesta Penuh Peluh Vol.2
+                </p>
+                <span
+                  class="px-3 block mt-1 w-fit rounded-full py-[2px] text-[10px] bg-orange-100 text-orange-500 label-category"
+                  >Konser</span
+                >
+              </div>
+              <div class="flex items-center gap-1">
+                <img src="https://eratix.id/icons/calendar.svg" alt="" />
+                <span>Kamis, 7 Mar 2024</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <img src="https://eratix.id/icons/loc.svg" alt="" />
+                <span>Yogyakarta</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <img src="https://eratix.id/icons/wallet.svg" alt="" />
+                <span>Mulai dari Rp69,996</span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="py-2 text-center text-white bg-orange-500 rounded-lg hover:bg-orange-400 ease-in duration-200"
+            >Beli Tiket</a
+          >
+        </div>
+        <div
+          class="flex flex-col justify-between flex-auto gap-4 p-4 border-2 border-gray-200 bg-white rounded-2xl card"
+        >
+          <a href="#">
+            <div
+              class="image-card-event h-[110px] sm:h-[180px] lg:h-[130px] xl:h-[120px] 2xl:h-[140px] rounded-md overflow-hidden flex items-center justify-center"
+            >
+              <img
+                src="img/p4.webp"
+                alt=""
+                class="text-gray-700 h-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-2 info">
+              <div>
+                <p
+                  class="mt-3 inline-block text-lg font-semibold text-orange-500 border-orange-900"
+                >
+                  AMIKOM FEST 2023
+                </p>
+                <span
+                  class="px-3 block mt-1 w-fit rounded-full py-[2px] text-[10px] bg-orange-100 text-orange-500 label-category"
+                  >Konser</span
+                >
+              </div>
+              <div class="flex items-center gap-1">
+                <img src="https://eratix.id/icons/calendar.svg" alt="" />
+                <span>Jumat, 15 Des 2023</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <img src="https://eratix.id/icons/loc.svg" alt="" />
+                <span>Yogyakarta</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <img src="https://eratix.id/icons/wallet.svg" alt="" />
+                <span>Mulai dari Rp55,000</span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="py-2 text-center text-white bg-orange-500 rounded-lg hover:bg-orange-400 ease-in duration-200"
+            >Beli Tiket</a
+          >
+        </div>
+        <div
+          class="flex flex-col justify-between flex-auto gap-4 p-4 border-2 border-gray-200 bg-white rounded-2xl card"
+        >
+          <a href="#">
+            <div
+              class="image-card-event h-[110px] sm:h-[180px] lg:h-[130px] xl:h-[120px] 2xl:h-[140px] rounded-md overflow-hidden flex items-center justify-center"
+            >
+              <img
+                src="img/p5.webp"
+                alt=""
+                class="text-gray-700 h-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-2 info">
+              <div>
+                <p
+                  class="mt-3 inline-block text-lg font-semibold text-orange-500 border-orange-900"
+                >
+                  AMIKOM INTERNATIONAL RELATIONS FESTIVAL
+                </p>
+                <span
+                  class="px-3 block mt-1 w-fit rounded-full py-[2px] text-[10px] bg-orange-100 text-orange-500 label-category"
+                  >Seminar & Workshop</span
+                >
+              </div>
+              <div class="flex items-center gap-1">
+                <img src="https://eratix.id/icons/calendar.svg" alt="" />
+                <span>Jumat, 24 Nov 2023</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <img src="https://eratix.id/icons/loc.svg" alt="" />
+                <span>Yogyakarta</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <img src="https://eratix.id/icons/wallet.svg" alt="" />
+                <span>Gratis</span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="py-2 text-center text-white bg-orange-500 rounded-lg hover:bg-orange-400 ease-in duration-200"
+            >Beli Tiket</a
+          >
+        </div>
+        <div
+          class="flex flex-col justify-between flex-auto gap-4 p-4 border-2 border-gray-200 bg-white rounded-2xl card"
+        >
+          <a href="#">
+            <div
+              class="image-card-event h-[110px] sm:h-[180px] lg:h-[130px] xl:h-[120px] 2xl:h-[140px] rounded-md overflow-hidden flex items-center justify-center"
+            >
+              <img
+                src="img/p6.webp"
+                alt=""
+                class="text-gray-700 h-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-2 info">
+              <div>
+                <p
+                  class="mt-3 inline-block text-lg font-semibold text-orange-500 border-orange-900"
+                >
+                  Seminar Personal Branding
+                </p>
+                <span
+                  class="px-3 block mt-1 w-fit rounded-full py-[2px] text-[10px] bg-orange-100 text-orange-500 label-category"
+                  >Seminar & Workshop</span
+                >
+              </div>
+              <div class="flex items-center gap-1">
+                <img src="https://eratix.id/icons/calendar.svg" alt="" />
+                <span>Sabtu, 2 Des 2023</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <img src="https://eratix.id/icons/loc.svg" alt="" />
+                <span>Yogyakarta</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <img src="https://eratix.id/icons/wallet.svg" alt="" />
+                <span>Mulai dari Rp10,000</span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="py-2 text-center text-white bg-orange-500 rounded-lg hover:bg-orange-400 ease-in duration-200"
+            >Beli Tiket</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- ends card events -->
+
+    <!-- footer -->
+    <footer class="mt-28 w-full border-orange-500 bg-orange-500">
+      <section
+        class="container flex flex-col items-center justify-between gap-8 py-8 text-white xl:flex-row xl:items-start xl:gap-12 xl:py-10"
+      >
+        <div class="logo flex w-full flex-col justify-start gap-4 xl:w-3/12">
+          <a href="home.html">
+            <img
+              width="150px"
+              src="img/logo_white.PNG"
+              alt="Logo Tixvel White"
+              class="rounded-md"
+            />
+          </a>
+          <p>"Gatau ini mau diisi apa dah"</p>
+          <p>
+            Dan biarkan aku berlari, Sejenak aku sembunyi, Tuk mengatur ulang
+            nafasku, Selaraskan lagi langkahku, Dan persetan dengan semua,
+            Tunggu saja aku kan kembali, Cukuplah kiranya hari ini, Aku akui aku
+            kalah.
+          </p>
+        </div>
+        <div
+          class="links flex flex-auto flex-col gap-8 xl:w-3/12 xl:flex-row xl:gap-12"
+        >
+          <div class="link flex flex-col gap-2">
+            <h3 class="mb-2 text-xl font-semibold">Hubungi Kami</h3>
+            <a href="https://wa.me/6295364907741" target="_blank">
+              <div class="flex gap-2">
+                <img
+                  width="24"
+                  src="img/icons8-whatsapp.svg"
+                  alt="whatsapp logo"
+                />
+                <span>+62 8953-6490-7741 (Customer Support)</span>
+              </div>
+            </a>
+            <a href="#" target="_blank">
+              <div class="flex gap-2">
+                <img
+                  width="24"
+                  class="h-6"
+                  src="img/icons8-instagram.svg"
+                  alt="instagram logo"
+                />
+                <span>tixvel.id</span>
+              </div>
+            </a>
+            <a href="#" target="_blank">
+              <div class="flex gap-2">
+                <img
+                  width="24"
+                  class="h-6"
+                  src="img/icons8-gmail.svg"
+                  alt="email logo"
+                />
+                <span>contact@tixvel.id</span>
+              </div>
+            </a>
+          </div>
+          <div class="link flex flex-col gap-2 xl:w-7/12">
+            <h3 class="mb-2 text-xl font-semibold">Metode Pembayaran</h3>
+            <div
+              class="grid w-auto gap-1 max-xl:grid-cols-5 max-md:grid-cols-3 xl:grid-cols-3"
+            >
+              <div class="rounded-md bg-white p-1">
+                <img
+                  class="scale-125"
+                  src="https://eratix.id/icons/qris.webp"
+                  alt="qris logo"
+                />
+              </div>
+              <div class="rounded-md bg-white p-1">
+                <img
+                  class="scale-125"
+                  src="https://eratix.id/icons/bri.webp"
+                  alt="bri logo"
+                />
+              </div>
+              <div class="rounded-md bg-white p-1">
+                <img
+                  class="scale-125"
+                  src="https://eratix.id/icons/bni.webp"
+                  alt="bni logo"
+                />
+              </div>
+              <div class="rounded-md bg-white p-1">
+                <img
+                  class="scale-125"
+                  src="https://eratix.id/icons/mandiri.webp"
+                  alt="mandiri logo"
+                />
+              </div>
+              <div class="rounded-md bg-white p-1">
+                <img
+                  class="scale-125"
+                  src="https://eratix.id/icons/cimbniaga.webp"
+                  alt="cimbniaga logo"
+                />
+              </div>
+              <div class="rounded-md bg-white p-1">
+                <img
+                  class="scale-125"
+                  src="https://eratix.id/icons/bsi.webp"
+                  alt="bsi logo"
+                />
+              </div>
+              <div class="rounded-md bg-white p-1">
+                <img
+                  class="scale-125"
+                  src="https://eratix.id/icons/permata.webp"
+                  alt="permata logo"
+                />
+              </div>
+              <div class="rounded-md bg-white p-1">
+                <img
+                  class="scale-125"
+                  src="https://eratix.id/icons/dana.webp"
+                  alt="dana logo"
+                />
+              </div>
+              <div class="rounded-md bg-white p-1">
+                <img
+                  class="scale-125"
+                  src="https://eratix.id/icons/ovo.webp"
+                  alt="ovo logo"
+                />
+              </div>
+              <div class="rounded-md bg-white p-1">
+                <img
+                  class="scale-125"
+                  src="https://eratix.id/icons/spay.webp"
+                  alt="spay logo"
+                />
+              </div>
+              <div class="rounded-md bg-white p-1">
+                <img
+                  class="scale-125"
+                  src="https://eratix.id/icons/linkaja.webp"
+                  alt="linkaja logo"
+                />
+              </div>
+              <div class="rounded-md bg-white p-1">
+                <img
+                  class="scale-125"
+                  src="https://eratix.id/icons/astrapay.webp"
+                  alt="astrapay logo"
+                />
+              </div>
+              <div class="rounded-md bg-white p-1">
+                <img
+                  class="scale-125"
+                  src="https://eratix.id/icons/alfamart.webp"
+                  alt="alfamart logo"
+                />
+              </div>
+              <div class="rounded-md bg-white p-1">
+                <img
+                  class="scale-125"
+                  src="https://eratix.id/icons/alfamidi.webp"
+                  alt="alfamidi logo"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="link flex flex-col xl:w-3/12">
+            <h3 class="mb-2 text-xl font-semibold">Tautan</h3>
+            <ul class="flex flex-col gap-1">
+              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="#">Syarat dan Ketentuan</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+            </ul>
+            <h3 class="mb-2 mt-6 text-xl font-semibold">Akun</h3>
+            <ul class="flex flex-col gap-1">
+              <li>
+                <a href="transaksi.html">Transaksi</a>
+              </li>
+              <li>
+                <a href="tiket.html">Tiket</a>
+              </li>
+              <li><a href="https://eratix.id/profile">Pengaturan Akun</a></li>
+              <li><a href="https://eratix.id/partner">Dasbor Partner</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <span class="container block w-full border-t py-8 text-center text-white">
+        © 2024 Tixvel. All Rights Reserved
+      </span>
+    </footer>
+    <!-- end footer -->
+
+    <!-- script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
