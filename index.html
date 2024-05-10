@@ -9,7 +9,7 @@
       src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
     <title>Home | TIXVEL</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="src/img/favicon.png" />
   </head>
   <body class="bg-[#F7F8F9]">
     <!-- navbar -->
@@ -19,8 +19,8 @@
       >
         <!-- Logo -->
         <div class="flex items-center justify-between md:w-auto w-full">
-          <a href="#" class="p-2 flex-1 font-bold"
-            ><img src="img/logo.png" class="h-16" alt="Tixvel Logo"
+          <a href="index.html" class="p-2 flex-1 font-bold"
+            ><img src="src/img/logo.png" class="h-16" alt="Tixvel Logo"
           /></a>
 
           <!-- mobile menu icon -->
@@ -128,22 +128,22 @@
               class="dropdown-menu absolute hidden bg-white rounded-md shadow mt-1 md:w-44"
             >
               <a
-                href="transaksi.html"
+                href="src/transaksi.html"
                 class="block p-2 hover:bg-gray-100 text-sm hover:rounded-md text-gray-700"
                 >Transaksi</a
               >
               <a
-                href="tiket.html"
+                href="src/tiket.html"
                 class="block p-2 hover:bg-gray-100 text-sm hover:rounded-md text-gray-700"
                 >Tiket</a
               >
               <a
-                href="profil.html"
+                href="src/profil.html"
                 class="block p-2 hover:bg-gray-100 text-sm hover:rounded-md text-gray-700"
                 >Pengaturan Akun</a
               >
               <a
-                href="login.html"
+                href="src/login.html"
                 class="block p-2 hover:bg-gray-100 text-sm font-semibold text-red-600 hover:rounded-md"
                 >Keluar</a
               >
@@ -161,11 +161,11 @@
           class="container relative w-full"
           x-data="{activeSlide: 2,
         slides: [
-          {id:1, img: 'img/p2.webp'},
-          {id:2, img: 'img/p3.webp'},
-          {id:3, img: 'img/p4.webp'},
-          {id:4, img: 'img/p5.webp'},
-          {id:5, img: 'img/p6.webp'}, 
+          {id:1, img: 'src/img/p2.webp'},
+          {id:2, img: 'src/img/p3.webp'},
+          {id:3, img: 'src/img/p4.webp'},
+          {id:4, img: 'src/img/p5.webp'},
+          {id:5, img: 'src/img/p6.webp'}, 
         ], 
             loop(){
               setInterval(() => {this.activeSlide = this.activeSlide === 5 ? 1 : this.activeSlide + 1}, 4000)
@@ -280,11 +280,11 @@
         <div
           class="flex flex-col justify-between flex-auto gap-4 p-4 border-2 border-gray-200 bg-white rounded-2xl"
         >
-          <a href="#">
+          <a href="src/detail_event.html">
             <div
               class="image-card-event h-[110px] sm:h-[180px] lg:h-[130px] xl:h-[120px] 2xl:h-[140px] rounded-md overflow-hidden flex items-center justify-center"
             >
-              <img src="img/p1.webp" alt="" class="h-full object-cover" />
+              <img src="src/img/p1.webp" alt="" class="h-full object-cover" />
             </div>
             <div class="flex flex-col gap-2 info">
               <div>
@@ -357,7 +357,7 @@
             </div>
           </a>
           <a
-            href="#"
+            href="src/detail_event.html"
             class="py-2 text-center text-white bg-orange-500 rounded-lg hover:bg-orange-600 ease-in duration-200 shadow-sm"
             >Beli Tiket</a
           >
@@ -365,11 +365,11 @@
         <div
           class="flex flex-col justify-between flex-auto gap-4 p-4 border-2 border-gray-200 bg-white rounded-2xl"
         >
-          <a href="#">
+          <a href="src/detail_event.html">
             <div
               class="image-card-event h-[110px] sm:h-[180px] lg:h-[130px] xl:h-[120px] 2xl:h-[140px] rounded-md overflow-hidden flex items-center justify-center"
             >
-              <img src="img/p2.webp" alt="" class="h-full object-cover" />
+              <img src="src/img/p2.webp" alt="" class="h-full object-cover" />
             </div>
             <div class="flex flex-col gap-2 info">
               <div>
@@ -442,7 +442,7 @@
             </div>
           </a>
           <a
-            href="#"
+            href="src/detail_event.html"
             class="py-2 text-center text-white bg-orange-500 rounded-lg hover:bg-orange-600 ease-in duration-200 shadow-sm"
             >Beli Tiket</a
           >
@@ -450,11 +450,11 @@
         <div
           class="flex flex-col justify-between flex-auto gap-4 p-4 border-2 border-gray-200 bg-white rounded-2xl"
         >
-          <a href="#">
+          <a href="src/detail_event.html">
             <div
               class="image-card-event h-[110px] sm:h-[180px] lg:h-[130px] xl:h-[120px] 2xl:h-[140px] rounded-md overflow-hidden flex items-center justify-center"
             >
-              <img src="img/p3.webp" alt="" class="h-full object-cover" />
+              <img src="src/img/p3.webp" alt="" class="h-full object-cover" />
             </div>
             <div class="flex flex-col gap-2 info">
               <div>
@@ -527,7 +527,7 @@
             </div>
           </a>
           <a
-            href="#"
+            href="src/detail_event.html"
             class="py-2 text-center text-white bg-orange-500 rounded-lg hover:bg-orange-600 ease-in duration-200 shadow-sm"
             >Beli Tiket</a
           >
@@ -535,11 +535,11 @@
         <div
           class="flex flex-col justify-between flex-auto gap-4 p-4 border-2 border-gray-200 bg-white rounded-2xl"
         >
-          <a href="#">
+          <a href="src/detail_event.html">
             <div
               class="image-card-event h-[110px] sm:h-[180px] lg:h-[130px] xl:h-[120px] 2xl:h-[140px] rounded-md overflow-hidden flex items-center justify-center"
             >
-              <img src="img/p4.webp" alt="" class="h-full object-cover" />
+              <img src="src/img/p4.webp" alt="" class="h-full object-cover" />
             </div>
             <div class="flex flex-col gap-2 info">
               <div>
@@ -612,7 +612,7 @@
             </div>
           </a>
           <a
-            href="#"
+            href="src/detail_event.html"
             class="py-2 text-center text-white bg-orange-500 rounded-lg hover:bg-orange-600 ease-in duration-200 shadow-sm"
             >Beli Tiket</a
           >
@@ -620,11 +620,11 @@
         <div
           class="flex flex-col justify-between flex-auto gap-4 p-4 border-2 border-gray-200 bg-white rounded-2xl"
         >
-          <a href="#">
+          <a href="src/detail_event.html">
             <div
               class="image-card-event h-[110px] sm:h-[180px] lg:h-[130px] xl:h-[120px] 2xl:h-[140px] rounded-md overflow-hidden flex items-center justify-center"
             >
-              <img src="img/p5.webp" alt="" class="h-full object-cover" />
+              <img src="src/img/p5.webp" alt="" class="h-full object-cover" />
             </div>
             <div class="flex flex-col gap-2 info">
               <div>
@@ -697,7 +697,7 @@
             </div>
           </a>
           <a
-            href="#"
+            href="src/detail_event.html"
             class="py-2 text-center text-white bg-orange-500 rounded-lg hover:bg-orange-600 ease-in duration-200 shadow-sm"
             >Beli Tiket</a
           >
@@ -705,11 +705,11 @@
         <div
           class="flex flex-col justify-between flex-auto gap-4 p-4 border-2 border-gray-200 bg-white rounded-2xl"
         >
-          <a href="#">
+          <a href="src/detail_event.html">
             <div
               class="image-card-event h-[110px] sm:h-[180px] lg:h-[130px] xl:h-[120px] 2xl:h-[140px] rounded-md overflow-hidden flex items-center justify-center"
             >
-              <img src="img/p6.webp" alt="" class="h-full object-cover" />
+              <img src="src/img/p6.webp" alt="" class="h-full object-cover" />
             </div>
             <div class="flex flex-col gap-2 info">
               <div>
@@ -809,10 +809,10 @@
         class="container flex flex-col items-center justify-between gap-8 py-8 text-white xl:flex-row xl:items-start xl:gap-12 xl:py-10"
       >
         <div class="logo flex w-full flex-col justify-start gap-4 xl:w-3/12">
-          <a href="home.html">
+          <a href="index.html">
             <img
               width="150px"
-              src="img/logo_white.PNG"
+              src="src/img/logo_white.PNG"
               alt="Logo Tixvel White"
               class="rounded-md"
             />
@@ -834,7 +834,7 @@
               <div class="flex gap-2">
                 <img
                   width="24"
-                  src="img/icons8-whatsapp.svg"
+                  src="src/img/icons8-whatsapp.svg"
                   alt="whatsapp logo"
                 />
                 <span>+62 8953-6490-7741 (Customer Support)</span>
@@ -845,7 +845,7 @@
                 <img
                   width="24"
                   class="h-6"
-                  src="img/icons8-instagram.svg"
+                  src="src/img/icons8-instagram.svg"
                   alt="instagram logo"
                 />
                 <span>tixvel.id</span>
@@ -856,7 +856,7 @@
                 <img
                   width="24"
                   class="h-6"
-                  src="img/icons8-gmail.svg"
+                  src="src/img/icons8-gmail.svg"
                   alt="email logo"
                 />
                 <span>contact@tixvel.id</span>
@@ -996,6 +996,6 @@
     <!-- end footer -->
 
     <!-- script -->
-    <script src="js/script.js"></script>
+    <script src="src/js/script.js"></script>
   </body>
 </html>
