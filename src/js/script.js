@@ -42,3 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// handle color navbar
+document.addEventListener("scroll", () => {
+  const navbar = document.querySelector("nav");
+
+  navbar.classList.toggle("sticky-navbar", window.scrollY > 0);
+});
